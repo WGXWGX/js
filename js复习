@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script>
+		var age = window.prompt("请输入XXX的年龄!","");
+		var ageGroup = function(age){
+			if(age<14)
+				document.write("儿童");
+			if(age<24 && age>=14)
+				document.write("青少年");
+			if(age>24 && age<40)
+				document.write("青年");
+			if(age>=40 && age<60)
+				document.write("中年");
+			if(age>=60)
+				document.write("老年");
+			// else
+			// 	document.write("不是数字");
+		}
+		var age = ageGroup(age);
+
+    </script>
+</body>
+</html>
+
+
