@@ -19,4 +19,3 @@
 </html>
 /****/
 setTimeout(function(){},0);  当队列中有setTimeout出现时，本来的顺序正常执行，但setTimeout 组成新的队列，等原队列里的东西执行完之后再执行setTimeout队列
-/**/
