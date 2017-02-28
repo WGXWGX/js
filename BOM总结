@@ -1,0 +1,39 @@
+由于BOM主要用于管理窗口与窗口之间的通讯，因此其核心对象是window
+window对象是BOM的顶层(核心)对象，所有对象都是通过它延伸出来的，也可以称为window的子对象
+JavaScript中的任何一个全局函数或变量都是window的属性
+window子对象有
+  document 对象  dom
+  frames 对象   不常用
+  history 对象    
+      back()	加载 history 列表中的前一个 URL
+      forward()	加载 history 列表中的下一个 URL
+      go(num)	加载 history 列表中的某个具体页面
+  location 对象
+  navigator 对象  
+      userAgent	返回由客户机发送服务器的 user-agent 头部的值
+      ie------Trident
+      chrome , safari  --- Webkit  内核
+      opera  ---- blink
+      firefox  ----  Gecko
+  screen 对象
+  
+  
+window对象的方法
+
+窗体控制
+moveBy(x,y)——从当前位置水平移动窗体x个像素，垂直移动窗体y个像素，x为负数，将向左移动窗体，y为负数，将向上移动窗体
+moveTo(x,y)——移动窗体左上角到相对于屏幕左上角的(x,y)点，当使用负数做为参数时会吧窗体移出屏幕的可视区域
+resizeBy(w,h)——相对窗体当前的大小，宽度调整w个像素，高度调整h个像素。如果参数为负值，将缩小窗体，反之扩大窗体
+resizeTo(w,h)——把窗体宽度调整为w个像素，高度调整为h个像素
+窗体滚动轴控制
+scrollTo(x,y)——在窗体中如果有滚动条，将横向滚动条移动到相对于窗体宽度为x个像素的位置，将纵向滚动条移动到相对于窗体高度为y个像素的位置
+scrollBy(x,y)—— 如果有滚动条，将横向滚动条移动到相对于当前横向滚动条的x个像素的位置(就是向左移动x像素)，将纵向滚动条移动到相对于当前纵向滚动条高度为y个像素的位置(就是向下移动y像素)
+窗体焦点控制
+focus()—— 使窗体或控件获取焦点
+blur()——与focus函数相反，使窗体或控件失去焦点
+新建窗体
+open()——打开(弹出)一个新的窗体
+close()——关闭窗体
+opener属性——新建窗体中对父窗体的引用，中文"开启者"的意思
+window.open方法语法
+	window.open(url, name, features, replace);
