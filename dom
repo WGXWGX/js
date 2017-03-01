@@ -1,0 +1,36 @@
+什么是DOM？
+
+Document Object Model (DOM)是HTML和XML文档的编程接口。它提供了上述文档的一种结构化表示，同时也定义了一种通过程序来改变文档结构，风格，以及内容的方式。DOM用一组结构化的节点以及对象来表示文档。本质上就是将网页和脚本语言以及编程语言连接起来。
+var d = document;
+	alert(d);//这仅仅表明document这个对象是存在的
+document对象有三个强大的方法，可以获取页面的任何元素
+
+	var p1 = document.getElementById("p1");//获取ID为p1的那个元素
+	//在一个文档中ID必须是唯一的，getElementById方法只会返回一个元素
+	alert(p1.tagName);
+	var allP = document.getElementsByTagName("p");//获取文档中所有p标签
+	//因为页面中标签相同的元素很多,所以即使页面中只有一个p元素,getElementsByTagName也会返回一个集合
+	for (var i=0;i < allP.length;i++) {
+		alert(allP[i].innerHTML);//像数组一样访问其中的每个元素
+	}
+	//getElementsByTagName还可以使用通配符*来获取所有的元素
+	var allTags = document.getElementsByTagName("*");
+	alert(allTags.length);
+	//更强大的是，getElementsByTagName不但可以在document对象上调用，也可以在其它HTML元素上调用
+	var p2 = document.getElementById("p2");
+	var p2ps = p2.getElementsByTagName("em");//将获取p2下面的em元素，而不获取p2之外的em
+	//还有一个通过name来获取元素的方法:getElementsByName
+	var radios = document.getElementsByName("check");//获取所有name为check的元素
+  获取和设置元素属性——getAttribute与setAttribute方法
+
+	var p1 = document.getElementById("p1");
+	alert(p1.getAttribute("id"));
+	p1.setAttribute("title","Value");
+  nodeType——节点类型，元素节点是1，文本节点是3
+nodeValue——节点值，元素节点为空，文本节点的nodeValue属性即为文本内容
+firstChild——该元素节点包含的第一个子节点
+lastChild——该元素节点包含的最后一个子节点
+nextSibling——该节点的后一个兄弟节点
+previousSibling——该节点的前一个兄弟节点
+childNodes——子节点列表,可以通过node.childNodes[index]（或node.childNodes.item(index)）来获取子节点
+nodeName——节点名称，对于元素节点，返回tagName,对于文本，则返回#text
