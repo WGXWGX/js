@@ -16,3 +16,8 @@ removeChild(node)	Node	从childNodes中删除node
 replaceChild (newnode,oldnode)	Node	将childNodes中的oldnode替换成newnode
 insertBefore (newnode,refnode)	Node	在childNodes中的refnode之前插入newnode
 除节点外，DOM还定义了一些助手对象，它们可以和节点一起使用，但不是DOM文档必有的部分。
+
+getNamedItem(name)——返回nodeName属性值等于name的节点；
+removeNamedItem(name)——删除nodeName属性值等于name的节点；
+setNamedItem(node)——将node添加到列表中，按其nodeName属性进行索引；
+item(pos)——像NodeList一样，返回在位置pos的节点；
