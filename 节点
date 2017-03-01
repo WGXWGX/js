@@ -1,0 +1,18 @@
+
+特性/方法	类型/返回类型	说 明
+nodeName	String	节点的名字；根据节点的类型而定义,元素节点返回tagName，文本节点返回#text,属性节点返回属性名
+nodeValue	String	节点的值；根据节点的类型而定义.元素节点此属性为空，文本节点些属性即为节点中的字符串，属性节点返回属性值
+nodeType	Number	节点的类型常量值之一
+ownerDocument	Document	指向这个节点所属的文档
+firstChild	Node	指向在childNodes列表中的第一个节点
+lastChild	Node	指向在childNodes列表中的最后一个节点
+childNodes	NodeList	所有子节点的列表
+previousSibling	Node	指向前一个兄弟节点；如果这个节点就是第一个兄弟节点，那么该值为null
+nextSibling	Node	指向后一个兄弟节点；如果这个节点就是最后一个兄弟节点，那么该值为null
+hasChildNodes()	Boolean	当childNodes包含一个或多个节点时，返回真
+attributes	NamedNodeMap	包含了代表一个元素的特性的Attr对象；仅用于Element节点
+appendChild(node)	Node	将node添加到childNodes的末尾
+removeChild(node)	Node	从childNodes中删除node
+replaceChild (newnode,oldnode)	Node	将childNodes中的oldnode替换成newnode
+insertBefore (newnode,refnode)	Node	在childNodes中的refnode之前插入newnode
+除节点外，DOM还定义了一些助手对象，它们可以和节点一起使用，但不是DOM文档必有的部分。
